@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BeBar - Checkout</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: url("https://themes.muffingroup.com/be/bar/wp-content/uploads/2015/02/home_bar_bg.png") repeat center center;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .header {
+      background-color: #2c3e50;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    .header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .header .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+    
+    .header .nav-links a:hover {
+      color: #f39c12;
+    }
+
+    /* Checkout Container */
+    .checkout-container {
+      width: 90%;
+      max-width: 900px;
+      margin: 30px auto;
+      background: #d0d5d6e3;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .checkout-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    /* Cart */
+    .cart {
+      margin-bottom: 30px;
+    }
+
+    .cart h2 {
+      margin-bottom: 15px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+      color: #2c3e50;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 12px;
+    }
+
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      margin-right: 20px;
+      object-fit: cover;
+    }
+
+    .item-details {
+      flex-grow: 1;
+    }
+
+    .item-name {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .item-price {
+      color: #27ae60;
+      margin-top: 5px;
+    }
+
+    .item-qty {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Summary */
+    .summary {
+      border-top: 2px solid #eee;
+      padding-top: 20px;
+    }
+
+    .summary h2 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    .summary p {
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 0;
+      font-size: 15px;
+    }
+
+    .summary .total {
+      font-weight: bold;
+      font-size: 18px;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+
+    /* Place Order Button */
+    .place-order {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background-color: #27ae60;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .place-order:hover {
+      background-color: #219150;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #2c3e50;
+      color: #fff;
+      font-size: 14px;
+      border-top: 4px solid #f39c12;
+    }
+
+    .footer a {
+      color: #f39c12;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">BeBar</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <div class="checkout-container">
+    <h1>Your Cart</h1>
+    <div class="cart">
+      <h2>Items</h2>
+
+      <!-- Red Wine -->
+      <div class="cart-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaYem1r7BlmZeUjnfLHtqKQMaqy9EbG0-kHA&s" alt="Wireless Headphones">
+        <div class="item-details">
+          <p class="item-name">Red Wine</p>
+          <p class="item-price">$100</p>
+        </div>
+        <p class="item-qty">Qty: 1</p>
+      </div>
+
+      <!-- Beer -->
+      <div class="cart-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoEBWmSWjmsV8d3wZ0OePhiO9myLJTNfCeDA&s" alt="Smart Watch">
+        <div class="item-details">
+          <p class="item-name">Beer</p>
+          <p class="item-price">$120</p>
+        </div>
+        <p class="item-qty">Qty: 2</p>
+      </div>
+
+      <!-- Shots -->
+      <div class="cart-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgWNvTMaB2ynRosrfSPJ8rcU-a6bDKFCk_Sg&s" alt="Bluetooth Speaker">
+        <div class="item-details">
+          <p class="item-name">Shots</p>
+          <p class="item-price">$80</p>
+        </div>
+        <p class="item-qty">Qty: 1</p>
+      </div>
+
+      <!-- Whiskey -->
+      <div class="cart-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxAf5ieUSYCR8vayiViNuAVbuaIIpkDKPWfQ&s" alt="Gaming Mouse">
+        <div class="item-details">
+          <p class="item-name">Whiskey</p>
+          <p class="item-price">$40</p>
+        </div>
+        <p class="item-qty">Qty: 1</p>
+      </div>
+    </div>
+
+    <div class="summary">
+      <h2>Order Summary</h2>
+      <p><span>Subtotal</span><span>$340</span></p>
+      <p><span>Shipping</span><span>$10</span></p>
+      <p class="total"><span>Total</span><span>$350</span></p>
+    </div>
+
+    <a href="payment.html"><button class="place-order">Place Order</button></a>
+  </div>
+
+<div class="footer">
+  <p>&copy; 2025 <strong>BeBar</strong>. All rights reserved.</p>
+  <p>
+    <a href="index.html" class="back-btn">Home</a>
+    <a href="#">Contact</a>
+  </p>
+</div>
+
+</body>
+</html>
